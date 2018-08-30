@@ -1,0 +1,83 @@
+import React from 'react';
+import Link from 'gatsby-link';
+import Img from 'gatsby-image';
+import styled from 'styled-components';
+
+
+const OuterWrapper = styled.div`
+  position: relative;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+`;
+
+const ContainerWrapper = styled.div`
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  padding: 0px 1.0875rem 1.45rem;
+  padding-top: 0;
+  margin-top: 1.45rem;
+  max-width: 960px;
+  min-height: 80vh;
+  // color: #4d4d4d;
+  color: #fff;
+  p {
+    
+  }
+  a {
+    // color: #4d4d4d;
+    color: #fff;
+    &:hover {
+      color: orange;
+      border-bottom: 2px solid;
+    }
+  }
+`;
+
+const IndexPage = ({ data }) => (
+  <OuterWrapper>
+
+    <Img
+      style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '100vh',
+        opacity: 0.8,
+      }}
+      sizes={data.background.sizes}
+    />
+
+    <ContainerWrapper>
+      <h1>Welcome to your new practice</h1>
+      <p>I can't wait to meet you.</p>
+      <p>This will be great.</p>
+      <Link to="/my-practice/">Go to My Practice</Link>
+      <br />
+      <Link to="/About/">Go to About Me</Link>
+      <br />
+      <Link to="/contact/">Go to Contact</Link>
+
+    </ContainerWrapper>
+
+  </OuterWrapper>
+);
+
+export default IndexPage;
+
+export const query = graphql`
+  query SiteMeta {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    background: imageSharp(id: {regex: "/about-bg/"}) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;
