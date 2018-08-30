@@ -4,17 +4,20 @@ import styled from 'styled-components';
 
 const HeaderWrapper = styled.div`
   max-width: 100%;
-  max-height: 18vh;
   position: relative;
   background: #1f70f2;
-  // padding: 1.45rem 1.0875rem;
+  // padding: 1.25rem 1.0675rem;
   padding-top: 1.40rem;
   display: flex;
   // justify-content: space-between;
   h1 {
     color: white;
+    font-size: 3rem;
     font-weight: lighter;
     padding-right: 4rem;
+  }
+  a {
+    text-decoration: none;
   }
 `;
 const HeaderContainer = styled.div`
@@ -28,9 +31,12 @@ const HeaderContainer = styled.div`
 
 const MainNav = styled.nav`
   ul {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 200;
     list-style: none;
     li {
-      margin-left: 6px;
+      margin-left: 10px;
       font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
     a {
