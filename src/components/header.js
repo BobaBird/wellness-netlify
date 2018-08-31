@@ -2,6 +2,28 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 
+
+const mediaSize = {
+  mobileS: '320px',
+  mobileM: '375px',
+  mobileL: '425px',
+  tablet: '768px',
+  laptop: '1082px',
+  laptopL: '1440px',
+  desktop: '2560px'
+};
+
+export const device = {
+  mobileS: `(max-width: ${mediaSize.mobileS})`,
+  mobileM: `(max-width: ${mediaSize.mobileM})`,
+  mobileL: `(max-width: ${mediaSize.mobileL})`,
+  tablet: `(max-width: ${mediaSize.tablet})`,
+  laptop: `(max-width: ${mediaSize.laptop})`,
+  laptopL: `(max-width: ${mediaSize.laptopL})`,
+  desktop: `(max-width: ${mediaSize.desktop})`,
+  desktopL: `(max-width: ${mediaSize.desktop})`
+};
+
 const HeaderWrapper = styled.div`
   max-width: 100%;
   position: relative;
@@ -49,8 +71,12 @@ const MainNav = styled.nav`
       }
     }
     }
+    @media ${device.laptop} {
+      display: none;
+    }
   }
 `;
+
 
 const Header = ({ siteTitle }) => (
   <HeaderWrapper>
