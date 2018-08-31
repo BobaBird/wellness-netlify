@@ -49,6 +49,10 @@ const HeaderContainer = styled.div`
     align-items: center;
     padding: 0;
     margin: 0 auto;
+
+    @media ${device.laptop} {
+      padding-left: 1.25rem;
+    }
 `;
 
 const MainNav = styled.nav`
