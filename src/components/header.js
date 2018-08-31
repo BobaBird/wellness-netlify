@@ -72,7 +72,9 @@ const MainNav = styled.nav`
     }
     }
     @media ${device.laptop} {
-      display: none;
+      display: block;
+      border-left: 1px solid #fff;
+      padding-right: 1.25rem;
     }
   }
 `;
