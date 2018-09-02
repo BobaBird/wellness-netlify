@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
+import Checkout from '../components/checkout';
 
 const OuterWrapper = styled.div`
   position: relative;
@@ -32,7 +34,27 @@ const ContainerWrapper = styled.div`
   }
 `;
 
-const Services = () => (
+const CardContainer = styled.div`
+  display: flex;
+  padding: 1.45rem 1.0875rem 1.45rem;
+  // justify-content: space-around:
+`;
+
+const Card = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin: 30px;
+  padding-top: 40px;
+  text-align: center;
+  border: 2px solid #4d4d4d;
+  border-radius: 40px;
+  max-width: 25rem;
+`;
+
+console.log({  });
+
+
+const Services = ({ data }) => (
   <OuterWrapper>
     <ContainerWrapper>
 
@@ -48,8 +70,18 @@ const Services = () => (
     <p>GENDER Identity and Expression</p>
     <p>BILINGUAL  in TAGALOG & ENGLISH</p>
 
-    <div>
-      <div>
+    <CardContainer>
+      <Card>
+        <Img 
+        style={{
+        position: 'relative',
+        // left: 0,
+        top: 0,
+        width: '2rem',
+        height: '2rem',
+        opacity: 0.8,
+      }}
+        sizes={data.card.sizes}/>
         <p>
           It is my privilege to accompany you in one-on-one on a journey to excavate and heal pain of body and mind, unlock potential, and build toward empowered, integrated embodiment.
           Book Online
@@ -57,10 +89,19 @@ const Services = () => (
           1 hr
           $50-$75
         </p>
-        <button>Book Now</button>
-      </div>
+      </Card>
 
-      <div>
+      <Card>
+        <Img
+        style={{
+        position: 'relative',
+        // left: 0,
+        top: 0,
+        width: '2rem',
+        height: '2rem',
+        opacity: 0.8,
+      }}
+         sizes={data.card.sizes}/>
         <p>
           Couples coaching creates a safe space in which to shine the light of awareness on unaddressed resentment, fear, and avoidance, clarify boundaries, needs and agreements, overcome painful patterns, build or rebuild trust, and co-create a vibrant new relationship vision.
           Book Online
@@ -68,10 +109,23 @@ const Services = () => (
           1 hr
           $80-$120
         </p>
-        <button>Book Now</button>
-      </div>
+      </Card>
 
-      <div>
+      <Card>
+
+        <div>
+        <Img
+        style={{
+        position: 'relative',
+        // left: 0,
+        top: 0,
+        width: '2rem',
+        height: '2rem',
+        opacity: 0.8,
+      }}
+         sizes={data.card.sizes}/>
+        </div>
+
         <p>
           Family coaching creates a safe space to bring old and new wounds out into the light to be healed, untangle misunderstanding, break down and release judgments, and bridge differences. Every family is unique. Some families are better suited to group sessions. In other cases, a single family member  hiring a coach may be more appropriate and can still have a powerful ripple effect on all parties involved.
           Book Online
@@ -79,9 +133,10 @@ const Services = () => (
           1 hr
           $100-$150
         </p>
-        <button>Book Now</button>
-      </div>
-    </div>
+      </Card>
+    </CardContainer>
+
+    <Checkout />
 
     <div>
       <Link to="/">Go back to the homepage</Link>
@@ -92,3 +147,18 @@ const Services = () => (
 );
 
 export default Services;
+
+export const query = graphql`
+  query servicesPage {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    card: imageSharp(id: {regex: "/about-bg/"}) {
+      sizes(maxWidth: 30) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`
