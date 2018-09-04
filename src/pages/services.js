@@ -102,6 +102,11 @@ const Card = styled.div`
   }
 `;
 
+const StripeWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
 
 
 
@@ -183,8 +188,13 @@ const Services = ({ data }) => (
         </p>
       </Card>
     </CardContainer>
+        
+    <StripeWrapper>  
+      <Checkout />
+    </StripeWrapper>
 
-    <Checkout />
+    <br/>
+    <br/>
 
     <div>
       <Link to="/">Go back to the homepage</Link>

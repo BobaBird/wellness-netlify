@@ -7,12 +7,14 @@ const cardStyles = {
   display: "flex",
   flexDirection: "column",
   justifyContent: "space-around",
-  alignItems: "flex-start",
+  alignItems: "center",
+  margin: "3rem",
   padding: "3rem",
   boxShadow: "5px 5px 25px 0 rgba(46,61,73,.2)",
   backgroundColor: "#fff",
   borderRadius: "6px",
   maxWidth: "400px",
+
 };
 const buttonStyles = {
   fontSize: "13px",
