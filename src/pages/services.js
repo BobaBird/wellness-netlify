@@ -31,6 +31,11 @@ const OuterWrapper = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   text-align: center;
+
+  @media only screen and (max-width: 1082px) {
+    max-width: 100vw;
+    padding: 0 auto;
+  }
 `;
 
 const ContainerWrapper = styled.div`
@@ -63,10 +68,10 @@ const CardContainer = styled.div`
   @media ${device.laptop} {
     display: inline-block;
     justify-content: space-around;
-    padding-left: 1rem;
+    // padding-left: 1rem;
   }
-  @media ${device.mobileL} {
-    padding: 0;
+  @media only screen and (min-width: 425px) {
+    padding: 0 !important;
   }
 `;
 
@@ -77,8 +82,7 @@ const Card = styled.div`
   text-align: center;
   overflow: hidden;
   border-radius: 4px;
-  width: 350px;
-  min-width: 350px;
+  max-width: 350px;
   height: 504px;
   min-height: 304px;
   box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
@@ -87,13 +91,14 @@ const Card = styled.div`
      font-size: 14px;
    }
 
-  @media ${device.laptop} {
-    margin: 1rem auto;
+  @media only screen and (max-width 1082px) and (min-width: 426px) {
+    margin-top: 2.5rem;
   }
 
-  @media ${device.mobileL} {
-    margin: 1rem auto;
-    // margin-left: 0;
+  @media only screen and (max-width: 425px) {
+    p {
+      font-size: 0.8rem;
+    }
   }
 `;
 

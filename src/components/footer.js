@@ -3,7 +3,7 @@ import Link from 'gatsby-link';
 
 const Footer = () => (
   <div style={{
-    background: '#282C33', position: 'static', width: '100%', bottom: '0', left: '0',
+    background: '#282C33', position: 'static', width: '100vw', bottom: '0', left: '0',
   }}
   >
     <div style={{

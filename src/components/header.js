@@ -50,8 +50,18 @@ const HeaderContainer = styled.div`
     padding: 0;
     margin: 0 auto;
 
-    @media ${device.laptop} {
-      padding-left: 1.25rem;
+    @media only screen and (min-width: 1082px) {
+      h1 {
+        padding-left: 1.25rem;
+      }
+      
+    }
+
+    @media only screen and (max-width: 425px) {
+      h1 {
+        padding-left: 1.25rem;
+        padding-right: 0;
+      }
     }
 `;
 
