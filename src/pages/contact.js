@@ -20,15 +20,27 @@ const ContainerWrapper = styled.div`
   max-width: 960px;
   min-height: 80vh;
   color: #4d4d4d;
+  h2 {
+    font-weight: 200;
+    font-size: 2.5rem;
+  }
   p {
-      
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
   a {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     color: #4d4d4d;
     &:hover {
       color: orange;
       border-bottom: 2px solid;
     }
+  }
+  #mailLink {
+    color: #7aceff;
   }
 `;
 
@@ -37,9 +49,19 @@ const Contact = () => (
     <ContainerWrapper>
 
       <h1>Contact</h1>
+      <h2>Hi</h2>
+      <p>If you have any questions or would like more information about scheduling an appointment you can reach me here.</p>
       <p>Tel: (510) 289-0397​</p>
-      <p>Email: lifewellnessfirst@gmail.com</p>
-      <Link to="/">Go back to the homepage</Link>
+      <p>Email:
+        <a id="mailLink"
+            href="mailto: lifewellnessfirst@gmail.com?subject=Information request" 
+        >
+           lifewellnessfirst@gmail.com
+        </a>
+      </p>
+
+
+      {/* <Link to="/">Go back to the homepage</Link> */}
 
     </ContainerWrapper>
   </OuterWrapper>
