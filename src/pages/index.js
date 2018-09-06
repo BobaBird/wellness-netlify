@@ -20,6 +20,7 @@ const ContainerWrapper = styled.div`
   margin-top: 1.45rem;
   max-width: 960px;
   min-height: 80vh;
+  text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
   // color: #4d4d4d;
   color: #fff;
   p {

@@ -24,6 +24,7 @@ const ContainerWrapper = styled.div`
   // color: #4d4d4d;
   color: #fff;
   // background-image: radial-gradient( rgba(41, 40, 68, 0.8), rgba(41, 40, 68, 0.6), rgba(41, 40, 68, 0.4));
+  text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
   p {
     font-weight: 200;
     font-size: 1.5rem;
