@@ -31,7 +31,6 @@ const ContainerWrapper = styled.div`
     line-height: 2.5rem;
   }
   a {
-    // color: #4d4d4d;
     color: #fff;
     &:hover {
       color: orange;
@@ -49,7 +48,7 @@ const About = ({ data }) => (
         left: 0,
         top: 0,
         width: '100%',
-        height: '100vh',
+        height: '110vh',
         opacity: 0.8,
       }}
       sizes={data.background.sizes}
