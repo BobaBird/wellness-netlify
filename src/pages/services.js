@@ -48,8 +48,15 @@ const ContainerWrapper = styled.div`
   // max-width: 960px;
   min-height: 80vh;
   color: #4d4d4d;
-  p {
-      
+  h2 {
+    font-weight: 300;
+  }
+  article {
+    p {
+      font-weight: 200;
+      font-size: 1.5rem;
+      line-height: 2.8rem;
+    }
   }
   a {
     color: #4d4d4d;
@@ -116,15 +123,29 @@ const Services = ({ data }) => (
 
     <h1>Services Offered</h1>
     <br />
-    <p>Individuals,</p>
-    <p>Couples & Families</p>
-    <p>SPECIALTY:</p>
-    <p>LGBTQ</p>
-    <p>SOMATIC PRACTICE</p>
-    <p>PYSCHOLOGICAL STUDIES</p>
-    <p>MULTICULTURAL Adaptation</p>
-    <p>GENDER Identity and Expression</p>
-    <p>BILINGUAL  in TAGALOG & ENGLISH</p>
+    <article>
+
+      <h2>
+        Individuals,
+        Couples & Families
+      </h2>
+      <p>
+        Specializing in:
+      </p>
+      <p>
+        LGBTQ,
+        Somatic Practice,
+        Psychological studies,
+        Multicultural Adaptation,
+        </p>
+        <p>
+        Gender Identity and Expression
+      </p>
+      <p>
+        All services offered in Tagolog & English
+      </p>
+
+    </article>
 
     <CardContainer>
       <Card>
