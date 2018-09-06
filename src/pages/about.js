@@ -48,7 +48,7 @@ const About = ({ data }) => (
         left: 0,
         top: 0,
         width: '100%',
-        height: '110vh',
+        height: '120vh',
         opacity: 0.8,
       }}
       sizes={data.background.sizes}
