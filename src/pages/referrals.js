@@ -82,7 +82,7 @@ const Refferals = () => (
         <cite>- Hyejo K. Somaticdream</cite>
       </p>
 
-      <Link to="/">Go back to the homepage</Link>
+      <Link to="#">Go back to the top</Link>
 
     </ContainerWrapper>
   </OuterWrapper>

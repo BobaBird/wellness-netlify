@@ -195,9 +195,9 @@ const Services = ({ data }) => (
 
     <br/>
     <br/>
-    
+
     <div>
-      <Link to="/">Go back to the homepage</Link>
+      <Link to="#">Go back to the top</Link>
     </div>
 
     </ContainerWrapper>

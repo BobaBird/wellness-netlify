@@ -20,12 +20,14 @@ const ContainerWrapper = styled.div`
   padding-top: 0;
   margin-top: 1.45rem;
   max-width: 960px;
-  height: 80vh;
+  min-height: 80vh;
   // color: #4d4d4d;
   color: #fff;
   // background-image: radial-gradient( rgba(41, 40, 68, 0.8), rgba(41, 40, 68, 0.6), rgba(41, 40, 68, 0.4));
   p {
-    
+    font-weight: 200;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
   a {
     // color: #4d4d4d;
@@ -60,7 +62,8 @@ const About = ({ data }) => (
         on to earn a BA in Interdisciplinary Studies and Masters in Psychological Studies, and
         trained in Somatic Psychotherapy from California Institute of Integral Studies in 2016.
       </p>
-      <Link to="/">Go back to the homepage</Link>
+
+      <Link to="#">Go back to the top</Link>
 
     </ContainerWrapper>
   </OuterWrapper>
@@ -76,7 +79,7 @@ export const query = graphql`
       }
     }
     background: imageSharp(id: {regex: "/about-bg/"}) {
-      sizes(maxWidth: 1500) {
+      sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes
       }
     }

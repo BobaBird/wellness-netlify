@@ -21,6 +21,7 @@ const ContainerWrapper = styled.div`
   min-height: 80vh;
   color: #4d4d4d;
   h2 {
+    margin: 60px;
     font-weight: 200;
     font-size: 2.5rem;
   }
@@ -41,7 +42,6 @@ const ContainerWrapper = styled.div`
   }
   #mailLink {
     color: #7aceff;
-  }
 `;
 
 const Contact = () => (
@@ -49,7 +49,7 @@ const Contact = () => (
     <ContainerWrapper>
 
       <h1>Contact</h1>
-      <h2>Hi</h2>
+      <h2>Thank you for visiting</h2>
       <p>If you have any questions or would like more information about scheduling an appointment you can reach me here.</p>
       <p>Tel: (510) 289-0397​</p>
       <p>Email:
@@ -61,7 +61,7 @@ const Contact = () => (
       </p>
 
 
-      {/* <Link to="/">Go back to the homepage</Link> */}
+      {/* <Link to="#" style={{ visibility: "hidden" }} id="topNav">Go back to the top</Link> */}
 
     </ContainerWrapper>
   </OuterWrapper>
