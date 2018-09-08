@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import { SocialIcon } from 'react-social-icons';
 
 const FooterWrapper = styled.div`
   display: flex;
@@ -43,12 +44,24 @@ const FooterWrapper = styled.div`
 
 
 const FooterContainer = styled.div`
-
+  // display: flex;
+  // justify-content: space-around;
+  list-style: none;
   margin: 0 auto;
   max-width: 1280px;
   padding: 1.55rem;
-  height: 195px;
+  height: 225px;
   color: gray;
+
+  li {
+    padding: 30px;
+  }
+
+  h3 {
+    padding-top: 30px;
+    font-size: 18px;
+  }
+
 `;
 
 const Footer = () => (
@@ -58,15 +71,19 @@ const Footer = () => (
       <p>Tel: (510) 555-5555</p>
       <p>Email: lifewellnessfirst@gmail.com</p>
     </FooterContainer> */}
-    <FooterContainer>
-      <h2>Social Media</h2>
-        <p>
-          <a href="https://www.facebook.com/wellnessinsomaticcoaching/" target="_blank"></a>
-        </p>
+    <FooterContainer id="social">
+
+        <li>
+          <SocialIcon url="https://www.facebook.com/wellnessinsomaticcoaching/" color="gray"/>
+        </li>
+        <li>
+          {/* <SocialIcon  network="email" href="mailto: lifewellnessfirst@gmail.com?subject=Information request" /> */}
+        </li>
+
     </FooterContainer>
 
-    <FooterContainer>
-      <h2>Website by</h2>
+    <FooterContainer id="webmaster">
+      <h3>A Website by</h3>
 
         <p>
           Leo Torres
