@@ -41,6 +41,7 @@ const FooterWrapper = styled.div`
   }
 `;
 
+
 const FooterContainer = styled.div`
 
   margin: 0 auto;
@@ -60,10 +61,10 @@ const Footer = () => (
     <FooterContainer>
       <h2>Social Media</h2>
         <p>
-          <a href="https://www.facebook.com/wellnessinsomaticcoaching/" target="_blank">Facebook</a>
+          <a href="https://www.facebook.com/wellnessinsomaticcoaching/" target="_blank"></a>
         </p>
     </FooterContainer>
-    
+
     <FooterContainer>
       <h2>Website by</h2>
 
