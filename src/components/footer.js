@@ -36,9 +36,11 @@ const FooterWrapper = styled.div`
     font-weight: lighter;
     text-align: center;
   }
-
   @media only screen and (max-width: 413px) {
     display: block;
+    li {
+      margin-left: 115px;
+    }
   }
 `;
 
@@ -52,16 +54,13 @@ const FooterContainer = styled.div`
   padding: 1.55rem;
   height: 225px;
   color: gray;
-
   li {
     padding: 30px;
   }
-
   h3 {
     padding-top: 30px;
     font-size: 18px;
   }
-
 `;
 
 const Footer = () => (
