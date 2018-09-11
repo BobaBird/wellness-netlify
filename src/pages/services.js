@@ -84,6 +84,7 @@ const CardContainer = styled.div`
 
 
 const Card = styled.div`
+// Use Stripe box-shadow values  **philz tip**
   position: relative;
   margin: 12px;
   text-align: center;
@@ -92,7 +93,7 @@ const Card = styled.div`
   max-width: 350px;
   height: 504px;
   min-height: 304px;
-  box-shadow: 0 27px 55px 0 rgba(0, 0, 0, 0.3), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 26px 0 rgba(0, 0, 0, 0.15), 0 17px 17px 0 rgba(0, 0, 0, 0.15);
    p {
      padding: 1rem;
      font-size: 14px;
@@ -103,6 +104,7 @@ const Card = styled.div`
   }
 
   @media only screen and (max-width: 425px) {
+    margin-top: 80px;
     p {
       font-size: 0.8rem;
     }

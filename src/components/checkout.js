@@ -3,6 +3,9 @@ import React from "react";
 // hardcoded amount (in US cents) to charge users
 // you could set this variable dynamically to charge different amounts
 const amount = 2500;
+const couples = 3000;
+const family = 4000;
+
 const cardStyles = {
   display: "flex",
   flexDirection: "column",
@@ -33,19 +36,19 @@ const buttonStyles = {
 const Checkout = class extends React.Component {
   state = {
     disabled: false,
-    buttonText: "BUY NOW",
+    buttonText: "BOOK",
     paymentMessage: "",
   };
 
   resetButton() {
-    this.setState({ disabled: false, buttonText: "BUY NOW" });
+    this.setState({ disabled: false, buttonText: "BOOK NOW" });
   }
 
   componentDidMount() {
     this.stripeHandler = StripeCheckout.configure({
       // You’ll need to add your own Stripe public key to the `checkout.js` file.
       // key: 'pk_test_STRIPE_PUBLISHABLE_KEY',
-      key: "pk_test_kuhbxb0MMZsp6fj6aTNDnxUu",
+      key: "	pk_test_cXx8I1dHUs7FOIpV9bDhzgCP",
       closed: () => {
         this.resetButton();
       },
@@ -87,11 +90,11 @@ const Checkout = class extends React.Component {
   render() {
     return (
       <div style={cardStyles}>
-        <h4>Spend your Money!</h4>
-        <p>
+        <h4>Book your session today.</h4>
+        {/* <p>
           Use any email, 4242 4242 4242 4242 as the credit card number, any 3
           digit number, and any future date of expiration.
-        </p>
+        </p> */}
         <button
           style={buttonStyles}
           onClick={event => this.openStripeCheckout(event)}
