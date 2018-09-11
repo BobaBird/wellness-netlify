@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import Checkout from '../components/checkout';
+import Calendar from '../components/calendar';
 
 const mediaSize = {
   mobileS: '320px',
@@ -114,6 +114,7 @@ const Card = styled.div`
 const StripeWrapper = styled.div`
   display: flex;
   justify-content: space-around;
+  margin: 80px;
 `;
 
 
@@ -212,13 +213,16 @@ const Services = ({ data }) => (
       </Card>
     </CardContainer>
         
-    <StripeWrapper>  
-      <Checkout />
-    </StripeWrapper>
+      {/* <Calendar /> */}
+        
+    {/* <StripeWrapper>  
+    </StripeWrapper> */}
+
+    
 
     <br/>
     <br/>
-
+    <hr/>
     <div>
       <Link to="#">Go back to the top</Link>
     </div>
