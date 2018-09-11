@@ -75,7 +75,7 @@ export const query = graphql`
         title
       }
     }
-    background: imageSharp(id: {regex: "/about-bg/"}) {
+    background: imageSharp(id: {regex: "/home-page/"}) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes
       }

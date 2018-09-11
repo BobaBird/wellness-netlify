@@ -234,18 +234,18 @@ export const query = graphql`
         title
       }
     }
-    single: imageSharp(id: {regex: "/couple-card/"}) {
-      sizes(maxWidth: 200) {
+    single: imageSharp(id: {regex: "/single-card/"}) {
+      sizes(maxWidth: 1120) {
         ...GatsbyImageSharpSizes
       }
     }
-    couple: imageSharp(id: {regex: "/couple-card/"}) {
-      sizes(maxWidth: 200) {
+    couple: imageSharp(id: {regex: "/couple-card-1/"}) {
+      sizes(maxWidth: 1120) {
         ...GatsbyImageSharpSizes
       }
     }
-    family: imageSharp(id: {regex: "/couple-card/"}) {
-      sizes(maxWidth: 200) {
+    family: imageSharp(id: {regex: "/family-card/"}) {
+      sizes(maxWidth: 1120) {
         ...GatsbyImageSharpSizes
       }
     }

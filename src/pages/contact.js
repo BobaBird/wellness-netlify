@@ -42,6 +42,7 @@ const ContainerWrapper = styled.div`
   }
   #mailLink {
     color: #7aceff;
+    text-shadow: 2px 2px 4px #7aceff;
 `;
 
 const Contact = () => (

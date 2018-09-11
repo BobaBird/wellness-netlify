@@ -19,6 +19,11 @@ const FooterWrapper = styled.div`
       text-align: left;
     }
   }
+  path {
+    &:hover {
+      fill: #9f9f9f;
+    }
+  }
   p {
     text-align: center;
     // font-size: 0.8rem;
@@ -59,7 +64,12 @@ const FooterContainer = styled.div`
   }
   h3 {
     padding-top: 30px;
-    font-size: 18px;
+    font-size: 14px;
+  }
+  p {
+    padding: 0;
+    margin: 0 auto;
+    font-size: 12px;
   }
 `;
 
@@ -82,11 +92,13 @@ const Footer = () => (
     </FooterContainer>
 
     <FooterContainer id="webmaster">
-      <h3>A Website by</h3>
+    <a href="https://leo-torres.com" target="_blank">
+      <h3>BobaBird Websites</h3>
 
         <p>
-          Leo Torres
+           - Leo Torres
         </p>
+    </a>
 
     </FooterContainer>
   </FooterWrapper>
