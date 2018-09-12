@@ -40,11 +40,6 @@ const ContainerWrapper = styled.div`
       border-bottom: 2px solid;
     }
   }
-  #mailLink {
-    color: #7aceff;
-    text-shadow: 2px 2px 4px #7aceff;
-  }
-
   button {
     outline: none;
     color: #fff;
@@ -64,7 +59,7 @@ const FormWrapper = styled.div`
   }
   input {
     height: 1.7rem;
-    font-size: 0.7rem;
+    font-size: 16px;
   }
   textarea {
     width: 600px;
@@ -76,8 +71,6 @@ const FormWrapper = styled.div`
   }
   
   @media only screen and (max-width: 413px) {
-    font-size: 16px;
-
     textarea {
       max-width: 350px;
     }
