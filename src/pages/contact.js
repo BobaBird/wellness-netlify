@@ -101,7 +101,7 @@ const Contact = () => (
       <p>Or send me a message</p>
 
       <FormWrapper>
-        <form name="contact" method="POST" data-netlify="true" >
+        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha>
         
             <p>
               <label>Name: <input type="text" name="name" /></label>   
@@ -118,8 +118,6 @@ const Contact = () => (
             <p>
               <label>Message: <textarea name="message" ></textarea></label>
             </p>
-
-            <div data-netlify-recaptcha></div>
 
             <p>
               <button type="submit">Send</button>
