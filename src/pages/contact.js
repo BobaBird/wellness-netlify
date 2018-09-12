@@ -70,6 +70,9 @@ const FormWrapper = styled.div`
     height: 200px;
     line-height: 1.4rem;
   }
+  .hidden {
+    display: none;
+  }
   
   @media only screen and (max-width: 413px) {
     textarea {
