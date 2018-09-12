@@ -101,7 +101,7 @@ const Contact = () => (
       <p>Or send me a message</p>
 
       <FormWrapper>
-        <form name="contact" method="POST" data-netlify="true" action="/pages/success/">
+        <form name="contact" method="POST" data-netlify="true" >
         
             <p>
               <label>Name: <input type="text" name="name" /></label>   
