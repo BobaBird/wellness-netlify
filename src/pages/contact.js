@@ -75,6 +75,7 @@ const FormWrapper = styled.div`
   }
   
   @media only screen and (max-width: 413px) {
+    font-size: inherit;
     textarea {
       max-width: 350px;
     }
@@ -100,10 +101,8 @@ const Contact = () => (
       <p>Or send me a message</p>
 
       <FormWrapper>
-        <form name="contact" method="POST"  netlify-honeypot="bot-field"  netlify>
-        <p className="hidden">
-          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
-        </p>
+        <form name="contact" method="POST" data-netlify="true">
+        
             <p>
               <label>Name: <input type="text" name="name" /></label>   
             </p>
