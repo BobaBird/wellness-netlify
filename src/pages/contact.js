@@ -59,7 +59,7 @@ const FormWrapper = styled.div`
   margin: 50px auto;
 
   label {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 300;
   }
   input {
@@ -75,7 +75,7 @@ const FormWrapper = styled.div`
   }
   
   @media only screen and (max-width: 413px) {
-    font-size: inherit;
+
     textarea {
       max-width: 350px;
     }
