@@ -98,9 +98,7 @@ const Contact = () => (
       <p>Or send me a message</p>
 
       <FormWrapper>
-        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha netlify-honeypot="bot-field">
-
-              <input type="hidden" name="bot-field" />
+        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha>
 
             <p>
               <label>Name: <input type="text" name="name" /></label>   
@@ -112,7 +110,7 @@ const Contact = () => (
             <p>
               <label>Message: <textarea name="message" ></textarea></label>
             </p>
-            <div class="g-recaptcha" data-sitekey="6LeJ8W8UAAAAAGxgTsCFRXBWtQm4yjbX3yc-dZsT"></div>
+            <div className="g-recaptcha" data-sitekey="6LeJ8W8UAAAAAGxgTsCFRXBWtQm4yjbX3yc-dZsT"></div>
             <p>
               <button type="submit">Send</button>
             </p>
@@ -120,6 +118,7 @@ const Contact = () => (
       </FormWrapper>
 
     </ContainerWrapper>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
   </OuterWrapper>
 );
 
