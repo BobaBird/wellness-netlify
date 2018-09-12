@@ -125,9 +125,6 @@ const Contact = () => (
         </form>
       </FormWrapper>
 
-
-      {/* <Link to="#" style={{ visibility: "hidden" }} id="topNav">Go back to the top</Link> */}
-
     </ContainerWrapper>
   </OuterWrapper>
 );
