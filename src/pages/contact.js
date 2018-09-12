@@ -43,6 +43,40 @@ const ContainerWrapper = styled.div`
   #mailLink {
     color: #7aceff;
     text-shadow: 2px 2px 4px #7aceff;
+  }
+
+  button {
+    outline: none;
+    color: #fff;
+    background-color: orange;
+    border-radius: 5px;
+    padding:  0 20px;
+    text-shadow: 2px 2px 4px gray;
+  }
+`;
+
+const FormWrapper = styled.div`
+  margin: 50px auto;
+
+  label {
+    font-size: 20px;
+    font-weight: 300;
+  }
+  input {
+    height: 1.7rem;
+  }
+  textarea {
+    width: 600px;
+    height: 200px;
+    line-height: 1.4rem;
+  }
+  
+  @media only screen and (max-width: 413px) {
+    textarea {
+      max-width: 350px;
+    }
+  }
+
 `;
 
 const Contact = () => (
@@ -53,13 +87,37 @@ const Contact = () => (
       <h2>Thank you for visiting</h2>
       <p>If you have any questions or would like more information about scheduling an appointment you can reach me here.</p>
       <p>Tel: (510) 289-0397​</p>
-      <p>Email:
+      {/* <p>Email:
         <a id="mailLink"
             href="mailto: lifewellnessfirst@gmail.com?subject=Information request" 
         >
            lifewellnessfirst@gmail.com
         </a>
-      </p>
+      </p> */}
+      <p>Or send me a message</p>
+
+      <FormWrapper>
+        <form name="contact" method="POST" data-netlify="true">
+            <p>
+              <label>Your Name: <input type="text" name="name" /></label>   
+            </p>
+            <p>
+              <label>Your Email: <input type="email" name="email" /></label>
+            </p>
+            {/* <p>
+              <label>Your Role: <select name="role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select></label>
+            </p> */}
+            <p>
+              <label>Message: <textarea name="message" ></textarea></label>
+            </p>
+            <p>
+              <button type="submit">Send</button>
+            </p>
+        </form>
+      </FormWrapper>
 
 
       {/* <Link to="#" style={{ visibility: "hidden" }} id="topNav">Go back to the top</Link> */}
