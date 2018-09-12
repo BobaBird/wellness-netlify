@@ -97,12 +97,15 @@ const Contact = () => (
       <p>Or send me a message</p>
 
       <FormWrapper>
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST"  netlify-honeypot="bot-field"  data-netlify="true">
+        <p className="hidden">
+          <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+        </p>
             <p>
-              <label>Your Name: <input type="text" name="name" /></label>   
+              <label>Name: <input type="text" name="name" /></label>   
             </p>
             <p>
-              <label>Your Email: <input type="email" name="email" /></label>
+              <label>Email: <input type="email" name="email" /></label>
             </p>
             {/* <p>
               <label>Your Role: <select name="role[]" multiple>
