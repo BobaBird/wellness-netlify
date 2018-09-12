@@ -51,7 +51,7 @@ const ContainerWrapper = styled.div`
     background-color: orange;
     border-radius: 5px;
     padding:  0 20px;
-    text-shadow: 2px 2px 4px gray;
+    text-shadow: 3px 3px 8px gray;
   }
 `;
 
@@ -118,7 +118,9 @@ const Contact = () => (
             <p>
               <label>Message: <textarea name="message" ></textarea></label>
             </p>
+
             <div data-netlify-recaptcha></div>
+
             <p>
               <button type="submit">Send</button>
             </p>
