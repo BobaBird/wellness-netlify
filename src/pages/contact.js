@@ -64,14 +64,19 @@ const FormWrapper = styled.div`
   }
   input {
     height: 1.7rem;
+    font-size: 0.7rem;
   }
   textarea {
     width: 600px;
     height: 200px;
     line-height: 1.4rem;
+  } 
+  .g-recaptcha {
+    margin: 2rem;
   }
   
   @media only screen and (max-width: 413px) {
+    font-size: inherit;
 
     textarea {
       max-width: 350px;
@@ -98,8 +103,8 @@ const Contact = () => (
       <p>Or send me a message</p>
 
       <FormWrapper>
-        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha>
-
+        <form name="contact" method="post" data-netlify="true" data-netlify-recaptcha netlify-honeypot="bot-field">
+            <input type="hidden" name="bot-field" />
             <p>
               <label>Name: <input type="text" name="name" /></label>   
             </p>
