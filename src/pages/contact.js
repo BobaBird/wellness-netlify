@@ -76,7 +76,7 @@ const FormWrapper = styled.div`
   }
   
   @media only screen and (max-width: 413px) {
-    font-size: inherit;
+    font-size: 16px;
 
     textarea {
       max-width: 350px;
