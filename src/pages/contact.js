@@ -59,7 +59,7 @@ const FormWrapper = styled.div`
   }
   input {
     height: 1.7rem;
-    font-size: 16px;
+    // font-size: 16px;
   }
   textarea {
     width: 600px;
@@ -71,6 +71,8 @@ const FormWrapper = styled.div`
   }
   
   @media only screen and (max-width: 413px) {
+    line-height: 1rem;
+    font-size: 1rem;
     textarea {
       max-width: 350px;
     }
