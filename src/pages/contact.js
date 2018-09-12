@@ -59,7 +59,7 @@ const FormWrapper = styled.div`
   }
   input {
     height: 1.7rem;
-    // font-size: 16px;
+    margin: .4rem;
   }
   textarea {
     width: 600px;

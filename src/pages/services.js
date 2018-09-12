@@ -213,12 +213,19 @@ const Services = ({ data }) => (
       </Card>
     </CardContainer>
         
-      {/* <Calendar /> */}
-        
     {/* <StripeWrapper>  
     </StripeWrapper> */}
 
-    
+    {/* <form name="schedule" method="post" data-netlify="true" netlify-honeypot="bot-field">
+      <p>
+      <input type="date" />
+      </p> 
+      <p>
+        <button type="submit">Book Now</button>
+      </p>
+
+    </form> */}
+
 
     <br/>
     <br/>
