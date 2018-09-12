@@ -1,12 +1,19 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  text-align: center;
+  padding: 5rem;
+  height: 80vh;
+`;
 
 const SuccessPage = () => (
-  <div>
-    <h1>For sent successfully!</h1>
+  <Wrapper>
+    <h1>Form sent successfully!</h1>
     <p></p>
     <Link to="/contact">Go Back</Link>
-  </div>
+  </Wrapper>
 )
 
 export default SuccessPage
