@@ -111,10 +111,8 @@ const Card = styled.div`
   }
 `;
 
-const StripeWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin: 80px;
+const CalanderWrapper = styled.div`
+  margin-top: 80px;
 `;
 
 
@@ -213,18 +211,9 @@ const Services = ({ data }) => (
       </Card>
     </CardContainer>
         
-    {/* <StripeWrapper>  
-    </StripeWrapper> */}
-
-    {/* <form name="schedule" method="post" data-netlify="true" netlify-honeypot="bot-field">
-      <p>
-      <input type="date" />
-      </p> 
-      <p>
-        <button type="submit">Book Now</button>
-      </p>
-
-    </form> */}
+     <CalanderWrapper>
+      <a href="https://sunny-donair.appointlet.com" target="_blank">Book Now</a>
+    </CalanderWrapper>   
 
 
     <br/>
