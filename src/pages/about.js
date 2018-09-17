@@ -12,9 +12,14 @@ const OuterWrapper = styled.div`
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 `;
 
+const ImageOverlay = styled.div`
+  position: relative;
+  background: rgba(20,20,20, 0.3);
+`;
+
 const ContainerWrapper = styled.div`
   position: relative;
-  z-index: 2;
+  z-index: 10;
   margin: 0 auto;
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
@@ -24,8 +29,9 @@ const ContainerWrapper = styled.div`
   // color: #4d4d4d;
   color: #fff;
   // background-image: radial-gradient( rgba(41, 40, 68, 0.8), rgba(41, 40, 68, 0.6), rgba(41, 40, 68, 0.4));
-  text-shadow: 2px 2px 8px #4d4d4d, -2px -2px 8px #4d4d4d;
+  text-shadow: 2px 2px 8px rgba(10 ,10, 10, 0.9), -2px -2px 8px rgba(10, 10, 10, 0.9);
   p {
+    text-shadow: 2px 2px 20px rgba(2, 2, 2, 0.9), -2px -2px 20px rgba(2, 2, 2, 0.9);
     font-weight: 200;
     font-size: 1.5rem;
     line-height: 2.5rem;
@@ -42,17 +48,19 @@ const ContainerWrapper = styled.div`
 const About = ({ data }) => (
   <OuterWrapper>
 
-    <Img
-      style={{
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        width: '100%',
-        height: '130vh',
-        opacity: 0.8,
-      }}
-      sizes={data.background.sizes}
-    />
+    <ImageOverlay>
+      <Img
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '130vh',
+          opacity: 0.8,
+        }}
+        sizes={data.background.sizes}
+      />
+    </ImageOverlay>
     <ContainerWrapper>
       <h1>About Me</h1>
       <p>
@@ -78,7 +86,7 @@ export const query = graphql`
         title
       }
     }
-    background: imageSharp(id: {regex: "/about-bg/"}) {
+    background: imageSharp(id: {regex: "/home-page/"}) {
       sizes(maxWidth: 1240) {
         ...GatsbyImageSharpSizes
       }
