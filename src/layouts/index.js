@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
+import favIcon from '../../static/favImage.png'
 
 import Header from '../components/header'
 import Footer from '../components/footer'
@@ -13,6 +14,9 @@ const Layout = ({ children, data }) => (
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
+      ]}
+      link={[
+        { rel: 'shortcut icon', type: 'image/png', href: `${favIcon}` }
       ]}
     />
     <Header siteTitle={data.site.siteMetadata.title} />
