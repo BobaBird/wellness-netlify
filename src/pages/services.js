@@ -212,7 +212,7 @@ const Services = ({ data }) => (
     </CardContainer>
         
      <CalanderWrapper>
-      <a href="https://sunny-donair.appointlet.com" target="_blank">Book Now</a>
+      <a href="https://sunny-donaire.appointlet.com" target="_blank">Book Now</a>
     </CalanderWrapper>   
 
 
@@ -241,7 +241,7 @@ export const query = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    couple: imageSharp(id: {regex: "/couple-card-1/"}) {
+    couple: imageSharp(id: {regex: "/couple-card1/"}) {
       sizes(maxWidth: 1120) {
         ...GatsbyImageSharpSizes
       }
