@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const OuterWrapper = styled.div`
   position: relative;
@@ -11,6 +12,7 @@ const OuterWrapper = styled.div`
 `;
 
 const ContainerWrapper = styled.div`
+  // text-shadow: 2px 2px 20px rgba(2, 2, 2, 0.9), -2px -2px 20px rgba(2, 2, 2, 0.9);
   position: relative;
   z-index: 2;
   margin: 0 auto;
@@ -21,7 +23,9 @@ const ContainerWrapper = styled.div`
   min-height: 80vh;
   color: #4d4d4d;
   p {
-      
+    // font-weight: 300;
+    // font-size: 1.5rem;
+    line-height: 2.5rem;
   }
   a {
     color: #4d4d4d;
@@ -33,8 +37,23 @@ const ContainerWrapper = styled.div`
 `;
 
 
-const Refferals = () => (
+const Refferals = ({ data }) => (
   <OuterWrapper>
+
+    {/* <Img
+      style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '200vh',
+        opacity: 0.8,
+      }}
+      sizes={data.background.sizes}
+    >
+    
+    </Img> */}
+
     <ContainerWrapper>
 
       <h1>Refferals</h1>
@@ -57,6 +76,8 @@ const Refferals = () => (
         <cite>- JG</cite>
       </p>
 
+      <hr/>
+
       <p>
         <q>
         Sunny’s sensitivity to his clients’ diverse needs, and skillfulness in supporting and
@@ -67,6 +88,8 @@ const Refferals = () => (
         </q>
         <cite>- A.C.</cite>
       </p>
+
+      <hr/>
 
       <p>
         <q>
@@ -82,6 +105,8 @@ const Refferals = () => (
         <cite>- Hyejo K. Somaticdream</cite>
       </p>
 
+      <hr/>
+
       <Link to="#">Go back to the top</Link>
 
     </ContainerWrapper>
@@ -89,3 +114,18 @@ const Refferals = () => (
 );
 
 export default Refferals;
+
+export const query = graphql`
+  query refSite {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    background: imageSharp(id: {regex: "/refferals/"}) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;

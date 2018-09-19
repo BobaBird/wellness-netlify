@@ -69,7 +69,7 @@ const ContainerWrapper = styled.div`
 
 const CardContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 1.45rem 1.0875rem 1.45rem;
 
   @media ${device.laptop} {
@@ -111,7 +111,7 @@ const Card = styled.div`
   }
 `;
 
-const CalanderWrapper = styled.div`
+const CalendarWrapper = styled.div`
   margin-top: 80px;
 `;
 
@@ -120,6 +120,7 @@ const CalanderWrapper = styled.div`
 
 const Services = ({ data }) => (
   <OuterWrapper>
+
     <ContainerWrapper>
 
     <h1>Services Offered</h1>
@@ -211,9 +212,9 @@ const Services = ({ data }) => (
       </Card>
     </CardContainer>
         
-     <CalanderWrapper>
+     <CalendarWrapper>
       <a href="https://sunny-donaire.appointlet.com" target="_blank">Book Now</a>
-    </CalanderWrapper>   
+    </CalendarWrapper>   
 
 
     <br/>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import styled from 'styled-components';
+import Img from 'gatsby-image';
 
 const OuterWrapper = styled.div`
   position: relative;
@@ -21,7 +22,7 @@ const ContainerWrapper = styled.div`
   min-height: 80vh;
   color: #4d4d4d;
   p {
-      
+    line-height: 2.5rem;
   }
   a {
     color: #4d4d4d;
@@ -32,8 +33,22 @@ const ContainerWrapper = styled.div`
   }
 `;
 
-const myPractice = () => (
+const myPractice = ({ data }) => (
   <OuterWrapper style={{ minHeight: '45vh' }}>
+
+    {/* <Img 
+      style={{
+        position: 'absolute',
+        left: 0,
+        top: 0,
+        width: '100%',
+        height: '130vh',
+        opacity: 0.8,
+      }}
+      sizes={data.background.sizes}
+    >
+    </Img> */}
+
     <ContainerWrapper>
 
       <h1>Somatic Practice</h1>
@@ -88,3 +103,18 @@ const myPractice = () => (
 );
 
 export default myPractice;
+
+export const query = graphql`
+  query myPracticeSite {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    background: imageSharp(id: {regex: "/butterfly/"}) {
+      sizes(maxWidth: 1240) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`

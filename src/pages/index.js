@@ -52,9 +52,11 @@ const IndexPage = ({ data }) => (
     />
 
     <ContainerWrapper>
-      <h1>Welcome to your new practice</h1>
-      <p>I can't wait to meet you.</p>
-      <p>This will be great.</p>
+      <h1>Discovering wellness</h1>
+      <h1>However you define it!</h1>
+
+      <br/>
+      <br/> 
       <Link to="/my-practice/">Go to My Practice</Link>
       <br />
       <Link to="/About/">Go to About Me</Link>
