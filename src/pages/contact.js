@@ -137,7 +137,7 @@ const Contact = ({ data }) => (
               left: 0,
               top: 0,
               width: '200px',
-              height: '200px',
+              // height: '200px',
               // opacity: 0.8,
             }}
             sizes={data.background.sizes}
