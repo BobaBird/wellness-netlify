@@ -3,8 +3,7 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Layout from "../components/layout";
-
-
+import { graphql } from 'gatsby';
 
 const OuterWrapper = styled.div`
   position: relative;

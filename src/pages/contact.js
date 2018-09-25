@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
 import Layout from "../components/layout";
-
+import { graphql } from 'gatsby';
 
 const OuterWrapper = styled.div`
   position: relative;

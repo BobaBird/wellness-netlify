@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import styled from 'styled-components';
-// import Img from 'gatsby-image';
 import Layout from "../components/layout";
+import { graphql } from 'gatsby';
 
 const OuterWrapper = styled.div`
   position: relative;
@@ -38,19 +38,6 @@ const myPractice = ({ data }) => (
   <Layout>
 
     <OuterWrapper style={{ minHeight: '45vh' }}>
-
-      {/* <Img 
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '130vh',
-          opacity: 0.8,
-        }}
-        sizes={data.background.sizes}
-      >
-      </Img> */}
 
       <ContainerWrapper>
 
@@ -113,11 +100,6 @@ export const query = graphql`
     site {
       siteMetadata {
         title
-      }
-    }
-    background: imageSharp(id: {regex: "/butterfly/"}) {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes
       }
     }
   }
