@@ -151,13 +151,6 @@ const Contact = ({ data }) => (
 
         <p>If you have any questions or would like more information about scheduling an appointment you can reach me here.</p>
         <p>Tel: (510) 289-0397​</p>
-        {/* <p>Email:
-          <a id="mailLink"
-              href="mailto: lifewellnessfirst@gmail.com?subject=Information request" 
-          >
-            lifewellnessfirst@gmail.com
-          </a>
-        </p> */}
         <p>Or send me a message</p>
 
         <FormWrapper>

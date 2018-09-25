@@ -1,0 +1,15 @@
+backend:
+  name: github
+  repo: BobaBird/wellness-netlify
+
+media_folder: static/assets
+
+collections:
+  - name: post
+    label: Posts
+    folder: src/posts
+    create: true
+    fields:
+      - { name: title, label: title }
+      - { name: date, label: times, widget: date }
+      - { name: body, label: Post, widget: markdown }

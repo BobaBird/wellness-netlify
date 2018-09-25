@@ -3,8 +3,9 @@ import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Layout from "../components/layout";
-import { graphql } from 'gatsby'
-;
+import { graphql } from 'gatsby';
+import PostListing from '../components/Post/PostListing'; 
+
 
 const OuterWrapper = styled.div`
   position: relative;
@@ -60,6 +61,11 @@ const IndexPage = ({ data }) => (
 
         <br/>
         <br/> 
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+           <PostListing key={node.id} post={node} />
+        ))}
+        <br/>
+        <br/>
         <Link to="/my-practice/">Go to My Practice</Link>
         <br />
         <Link to="/About/">Go to About Me</Link>
@@ -79,6 +85,18 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+      }
+    }
+    allMarkdownRemark {
+      edges {
+        node {
+          frontmatter {
+            title
+            date
+          }
+          id
+          html
+        }
       }
     }
     background: imageSharp(fluid: {originalName: {eq: "home-page.jpg" } } ) {
