@@ -32,7 +32,7 @@ const ContainerWrapper = styled.div`
   text-shadow: 2px 2px 8px rgba(10 ,10, 10, 0.9), -2px -2px 8px rgba(10, 10, 10, 0.9);
   p {
     text-shadow: 2px 2px 20px rgba(2, 2, 2, 0.9), -2px -2px 20px rgba(2, 2, 2, 0.9);
-    font-weight: 200;
+    font-weight: 600;
     font-size: 1.5rem;
     line-height: 2.5rem;
   }
