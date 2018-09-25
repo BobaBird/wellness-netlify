@@ -1,6 +1,6 @@
 ---
-title: 'Special Offers'
-date: 'Sep 2018 - Dec 2018'
+title: ''
+date: ''
 ---
 
 Free 20min Phone consultations are available!  
