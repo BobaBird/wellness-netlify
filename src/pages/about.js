@@ -1,7 +1,8 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
+import Layout from "../components/layout";
 
 
 
@@ -46,35 +47,37 @@ const ContainerWrapper = styled.div`
 `;
 
 const About = ({ data }) => (
-  <OuterWrapper>
+  <Layout>
+    <OuterWrapper>
 
-    <ImageOverlay>
-      <Img
-        style={{
-          position: 'absolute',
-          left: 0,
-          top: 0,
-          width: '100%',
-          height: '130vh',
-          opacity: 0.8,
-        }}
-        sizes={data.background.sizes}
-      />
-    </ImageOverlay>
-    <ContainerWrapper>
-      <h1>About Me</h1>
-      <p>
-        Hi my name is Sunny Donaire. I am a transgender male born and raised in Tupi South Cotabato,
-        Mindanao, Philippines, where I earned a Midwifery degree in 1999. I Arrived here in America
-        in 2001, graduated from the Skyline College's Respiratory Therapy Program in 2006, and went
-        on to earn a BA in Interdisciplinary Studies and Masters in Psychological Studies, and
-        trained in Somatic Psychotherapy from California Institute of Integral Studies in 2016.
-      </p>
+      <ImageOverlay>
+        <Img
+          style={{
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: '100%',
+            height: '130vh',
+            opacity: 0.8,
+          }}
+          sizes={data.background.fluid}
+        />
+      </ImageOverlay>
+      <ContainerWrapper>
+        <h1>About Me</h1>
+        <p>
+          Hi my name is Sunny Donaire. I am a transgender male born and raised in Tupi South Cotabato,
+          Mindanao, Philippines, where I earned a Midwifery degree in 1999. I Arrived here in America
+          in 2001, graduated from the Skyline College's Respiratory Therapy Program in 2006, and went
+          on to earn a BA in Interdisciplinary Studies and Masters in Psychological Studies, and
+          trained in Somatic Psychotherapy from California Institute of Integral Studies in 2016.
+        </p>
 
-      <Link to="#">Go back to the top</Link>
+        <Link to="#">Go back to the top</Link>
 
-    </ContainerWrapper>
-  </OuterWrapper>
+      </ContainerWrapper>
+    </OuterWrapper>
+  </Layout>
 );
 
 export default About;
@@ -86,10 +89,10 @@ export const query = graphql`
         title
       }
     }
-    background: imageSharp(id: {regex: "/about-1/"}) {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes
-      }
+    background: imageSharp(fluid: {originalName: {eq: "about-1.jpg" }}) {
+			fluid(maxWidth: 1240) {
+      ...GatsbyImageSharpFluid
     }
+  }
   }
 `

@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 import styled from 'styled-components';
 import { SocialIcon } from 'react-social-icons';
 
@@ -92,7 +92,7 @@ const Footer = () => (
     </FooterContainer>
 
     <FooterContainer id="webmaster">
-    <a href="https://leo-torres.com" target="_blank">
+    <a href="https://leo-torres.com" target="_blank" rel="noopener noreferrer" >
       <h3>BobaBird Websites</h3>
 
         <p>

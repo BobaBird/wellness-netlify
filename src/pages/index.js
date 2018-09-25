@@ -1,8 +1,10 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import Img from 'gatsby-image';
 import styled from 'styled-components';
-
+import Layout from "../components/layout";
+import { graphql } from 'gatsby'
+;
 
 const OuterWrapper = styled.div`
   position: relative;
@@ -37,35 +39,37 @@ const ContainerWrapper = styled.div`
 `;
 
 const IndexPage = ({ data }) => (
-  <OuterWrapper>
+  <Layout>
+    <OuterWrapper>
 
-    <Img
-      style={{
-        position: 'absolute',
-        left: 0,
-        top: 0,
-        width: '100%',
-        height: '130vh',
-        opacity: 0.8,
-      }}
-      sizes={data.background.sizes}
-    />
+      <Img
+        style={{
+          position: 'absolute',
+          left: 0,
+          top: 0,
+          width: '100%',
+          height: '130vh',
+          opacity: 0.8,
+        }}
+        fluid={data.background.fluid}
+      />
 
-    <ContainerWrapper>
-      <h1>Discovering wellness</h1>
-      <h1>However you define it!</h1>
+      <ContainerWrapper>
+        <h1>Discovering wellness</h1>
+        <h1>However you define it!</h1>
 
-      <br/>
-      <br/> 
-      <Link to="/my-practice/">Go to My Practice</Link>
-      <br />
-      <Link to="/About/">Go to About Me</Link>
-      <br />
-      <Link to="/contact/">Go to Contact</Link>
+        <br/>
+        <br/> 
+        <Link to="/my-practice/">Go to My Practice</Link>
+        <br />
+        <Link to="/About/">Go to About Me</Link>
+        <br />
+        <Link to="/contact/">Go to Contact</Link>
 
-    </ContainerWrapper>
+      </ContainerWrapper>
 
-  </OuterWrapper>
+    </OuterWrapper>
+  </Layout>    
 );
 
 export default IndexPage;
@@ -77,9 +81,9 @@ export const query = graphql`
         title
       }
     }
-    background: imageSharp(id: {regex: "/home-page/"}) {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes
+    background: imageSharp(fluid: {originalName: {eq: "home-page.jpg" } } ) {
+			fluid(maxWidth: 1240) {
+      ...GatsbyImageSharpFluid
       }
     }
   }

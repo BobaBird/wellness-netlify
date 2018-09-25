@@ -1,8 +1,11 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import { Link } from 'gatsby';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
-import Calendar from '../components/calendar';
+import { graphql } from 'gatsby'
+import Layout from '../components/layout';
+// import Layout from "../components/layout";
+
 
 const mediaSize = {
   mobileS: '320px',
@@ -119,6 +122,7 @@ const CalendarWrapper = styled.div`
 
 
 const Services = ({ data }) => (
+<Layout>
   <OuterWrapper>
 
     <ContainerWrapper>
@@ -152,14 +156,15 @@ const Services = ({ data }) => (
     <CardContainer>
       <Card>
         <Img 
-        style={{
-        position: 'relative',
-        // left: 0,
-        top: 0,
-        // width: '100vw',
-        height: '200px',
-      }}
-        sizes={data.single.sizes} />
+            style={{
+            position: 'relative',
+            // left: 0,
+            top: 0,
+            // width: '100vw',
+            height: '200px',
+            }}
+            fluid={data.single.fluid} 
+        />
         <p>
           It is my privilege to accompany you in one-on-one on a journey to excavate and heal pain of body and mind, unlock potential, and build toward empowered, integrated embodiment.
           Book Online
@@ -171,14 +176,15 @@ const Services = ({ data }) => (
 
       <Card>
         <Img
-        style={{
-        position: 'relative',
-        // left: 0,
-        top: 0,
-        // width: '100vw',
-        height: '200px',
-      }}
-         sizes={data.couple.sizes} />
+          style={{
+          position: 'relative',
+          // left: 0,
+          top: 0,
+          // width: '100vw',
+          height: '200px',
+          }}
+         fluid={data.couple.fluid} 
+        />
         <p>
           Couples coaching creates a safe space in which to shine the light of awareness on unaddressed resentment, fear, and avoidance, clarify boundaries, needs and agreements, overcome painful patterns, build or rebuild trust, and co-create a vibrant new relationship vision.
           Book Online
@@ -192,14 +198,15 @@ const Services = ({ data }) => (
 
         <div>
         <Img
-        style={{
-        position: 'relative',
-        // left: 0,
-        top: 0,
-        // width: '350px',
-        height: '200px',
-        }}
-         sizes={data.family.sizes} />
+          style={{
+          position: 'relative',
+          // left: 0,
+          top: 0,
+          // width: '350px',
+          height: '200px',
+          }}
+         fluid={data.family.fluid} 
+        />
         </div>
 
         <p>
@@ -213,7 +220,7 @@ const Services = ({ data }) => (
     </CardContainer>
         
      <CalendarWrapper>
-      <a href="https://sunny-donaire.appointlet.com" target="_blank">Book Now</a>
+      <a href="https://sunny-donaire.appointlet.com" target="_blank" rel="noopener noreferrer" >Book Now</a>
     </CalendarWrapper>   
 
 
@@ -226,6 +233,7 @@ const Services = ({ data }) => (
 
     </ContainerWrapper>
   </OuterWrapper>
+</Layout>
 );
 
 export default Services;
@@ -237,19 +245,19 @@ export const query = graphql`
         title
       }
     }
-    single: imageSharp(id: {regex: "/single-card/"}) {
-      sizes(maxWidth: 1120) {
-        ...GatsbyImageSharpSizes
+    single: imageSharp(fluid: {originalName: {eq: "single-card.jpg" } } ) {
+			fluid(maxWidth: 1120) {
+      ...GatsbyImageSharpFluid
       }
     }
-    couple: imageSharp(id: {regex: "/couple-card1/"}) {
-      sizes(maxWidth: 1120) {
-        ...GatsbyImageSharpSizes
+    couple: imageSharp(fluid: {originalName: {eq: "couple-card1.jpg" } } ) {
+			fluid(maxWidth: 1120) {
+      ...GatsbyImageSharpFluid
       }
     }
-    family: imageSharp(id: {regex: "/family-card/"}) {
-      sizes(maxWidth: 1120) {
-        ...GatsbyImageSharpSizes
+    family: imageSharp(fluid: {originalName: {eq: "family-card.jpg" } } ) {
+			fluid(maxWidth: 1120) {
+      ...GatsbyImageSharpFluid
       }
     }
   }

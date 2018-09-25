@@ -1,7 +1,8 @@
 import React from 'react';
-import Link from 'gatsby-link';
+// import Link from 'gatsby-link';
 import styled from 'styled-components';
 import Img from 'gatsby-image';
+import Layout from "../components/layout";
 
 
 const OuterWrapper = styled.div`
@@ -123,62 +124,65 @@ const FormWrapper = styled.div`
 `;
 
 const Contact = ({ data }) => (
-  <OuterWrapper>
-    <ContainerWrapper>
+  <Layout>
 
-      <h1>Contact</h1>
-      <h2>Thank you for visiting</h2>
+    <OuterWrapper>
+      <ContainerWrapper>
 
-      <CardContainer>
-        <Card>
-          <Img
-            style={{
-              // position: 'absolute',
-              left: 0,
-              top: 0,
-              width: '200px',
-              height: '200px',
-              // opacity: 0.8,
-            }}
-            sizes={data.background.sizes}
+        <h1>Contact</h1>
+        <h2>Thank you for visiting</h2>
+
+        <CardContainer>
+          <Card>
+            <Img
+              style={{
+                // position: 'absolute',
+                left: 0,
+                top: 0,
+                width: '250px',
+                // height: '200px',
+                // opacity: 0.8,
+              }}
+              sizes={data.portrait.fluid}
+            >
+            </Img>
+          </Card>
+        </CardContainer>
+
+        <p>If you have any questions or would like more information about scheduling an appointment you can reach me here.</p>
+        <p>Tel: (510) 289-0397​</p>
+        {/* <p>Email:
+          <a id="mailLink"
+              href="mailto: lifewellnessfirst@gmail.com?subject=Information request" 
           >
-          </Img>
-        </Card>
-      </CardContainer>
+            lifewellnessfirst@gmail.com
+          </a>
+        </p> */}
+        <p>Or send me a message</p>
 
-      <p>If you have any questions or would like more information about scheduling an appointment you can reach me here.</p>
-      <p>Tel: (510) 289-0397​</p>
-      {/* <p>Email:
-        <a id="mailLink"
-            href="mailto: lifewellnessfirst@gmail.com?subject=Information request" 
-        >
-           lifewellnessfirst@gmail.com
-        </a>
-      </p> */}
-      <p>Or send me a message</p>
+        <FormWrapper>
+          <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
+              <p>
+                <label>Name: <input type="text" name="name" /></label>   
+              </p>
+              <p>
+                <label>Email: <input type="email" name="email" /></label>
+              </p>
+              
+              <p>
+                <label>Message: <textarea name="message" ></textarea></label>
+              </p>
+              <p>
+                <button type="submit">Send</button>
+              </p>
+          </form>
+        </FormWrapper>
 
-      <FormWrapper>
-        <form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact" />
-            <p>
-              <label>Name: <input type="text" name="name" /></label>   
-            </p>
-            <p>
-              <label>Email: <input type="email" name="email" /></label>
-            </p>
-            
-            <p>
-              <label>Message: <textarea name="message" ></textarea></label>
-            </p>
-            <p>
-              <button type="submit">Send</button>
-            </p>
-        </form>
-      </FormWrapper>
-
-    </ContainerWrapper>
-    {/* <script src='https://www.google.com/recaptcha/api.js'></script> */}
-  </OuterWrapper>
+      </ContainerWrapper>
+      {/* <script src='https://www.google.com/recaptcha/api.js'></script> */}
+    </OuterWrapper>
+  </Layout>
 );
 
 export default Contact;
@@ -190,10 +194,10 @@ export const query = graphql`
         title
       }
     }
-    background: imageSharp(id: {regex: "/SunnyContact/"}) {
-      sizes(maxWidth: 1240) {
-        ...GatsbyImageSharpSizes
-      }
+    portrait: imageSharp(fluid: {originalName: {eq: "SunnyContact.jpg" } } ) {
+			fluid(maxWidth: 1240) {
+      ...GatsbyImageSharpFluid
     }
+  }
   }
 `;
