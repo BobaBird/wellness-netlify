@@ -33,7 +33,7 @@ const ContainerWrapper = styled.div`
   text-shadow: 2px 2px 8px rgba(10 ,10, 10, 0.9), -2px -2px 8px rgba(10, 10, 10, 0.9);
   p {
     text-shadow: 2px 2px 20px rgba(2, 2, 2, 0.9), -2px -2px 20px rgba(2, 2, 2, 0.9);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.5rem;
   }
@@ -58,7 +58,7 @@ const About = ({ data }) => (
             top: 0,
             width: '100%',
             height: '140vh',
-            opacity: 0.8,
+            opacity: 0.9,
           }}
           sizes={data.background.fluid}
         />

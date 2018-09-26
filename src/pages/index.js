@@ -51,7 +51,7 @@ const IndexPage = ({ data }) => (
           top: 0,
           width: '100%',
           height: '130vh',
-          opacity: 0.8,
+          opacity: 0.9,
         }}
         fluid={data.background.fluid}
       />
