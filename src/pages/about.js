@@ -57,7 +57,7 @@ const About = ({ data }) => (
             left: 0,
             top: 0,
             width: '100%',
-            height: '140vh',
+            height: '150vh',
             opacity: 0.9,
           }}
           sizes={data.background.fluid}
