@@ -4,11 +4,12 @@ import Img from 'gatsby-image';
 import styled from 'styled-components';
 import Layout from "../components/layout";
 import { graphql } from 'gatsby';
-import PostListing from '../components/Post/PostListing'; 
+import PostListing from '../components/Posts/PostListing'; 
 
 
 const OuterWrapper = styled.div`
   position: relative;
+  background: black;
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -96,6 +97,7 @@ export const query = graphql`
           }
           id
           html
+          excerpt(pruneLength: 200)
         }
       }
     }

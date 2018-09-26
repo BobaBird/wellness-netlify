@@ -7,6 +7,7 @@ import { graphql } from 'gatsby';
 
 const OuterWrapper = styled.div`
   position: relative;
+  background: black;
   overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
     Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
@@ -32,7 +33,7 @@ const ContainerWrapper = styled.div`
   text-shadow: 2px 2px 8px rgba(10 ,10, 10, 0.9), -2px -2px 8px rgba(10, 10, 10, 0.9);
   p {
     text-shadow: 2px 2px 20px rgba(2, 2, 2, 0.9), -2px -2px 20px rgba(2, 2, 2, 0.9);
-    font-weight: 600;
+    font-weight: 300;
     font-size: 1.5rem;
     line-height: 2.5rem;
   }

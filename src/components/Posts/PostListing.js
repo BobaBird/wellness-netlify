@@ -7,7 +7,7 @@ const PostListing = ({ post }) => <article  >
             {post.frontmatter.date}
         </h2>
     </span>   
-    <h1 dangerouslySetInnerHTML={{  __html: post.html }}  />
+    <h1>{post.excerpt}</h1>
 </article>
 ;
 
