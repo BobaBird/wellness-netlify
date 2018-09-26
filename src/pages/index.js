@@ -91,10 +91,6 @@ export const query = graphql`
     allMarkdownRemark {
       edges {
         node {
-          frontmatter {
-            title
-            date
-          }
           id
           html
           excerpt(pruneLength: 200)
