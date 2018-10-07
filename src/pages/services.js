@@ -114,8 +114,30 @@ const Card = styled.div`
   }
 `;
 
-const CalendarWrapper = styled.div`
-  margin-top: 80px;
+const BtnStyle = styled.div`
+  margin 80px auto;
+  // margin-top: 80px;
+  // border-radius: 4px;
+  // font-weight: 600;
+  // font-size: 16px;
+  // line-height: 45px;
+  // text-transform: uppercase;
+  // border: red;
+  // box-shadow: 2px 2px 4px #4d4d4d;
+  // outline: none;
+  // width: 180px;
+  // background: red;
+  // color: #fff;
+  // position: relative;
+  // overflow: hidden;
+  // z-index: 20;
+  text-transform: uppercase;
+  font-size: 2rem;
+
+  a {
+    // color: #fff;
+
+  }
 `;
 
 
@@ -219,9 +241,9 @@ const Services = ({ data }) => (
       </Card>
     </CardContainer>
         
-     <CalendarWrapper>
+     <BtnStyle>
       <a href="https://sunny-donaire.appointlet.com" target="_blank" rel="noopener noreferrer" >Book Now</a>
-    </CalendarWrapper>   
+    </BtnStyle>   
 
 
     <br/>
