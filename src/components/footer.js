@@ -93,11 +93,11 @@ const Footer = () => (
 
     <FooterContainer id="webmaster">
     <a href="https://leo-torres.com" target="_blank" rel="noopener noreferrer" >
-      <h3>BobaBird Websites</h3>
+      <h3>Leo T | Web Dev</h3>
 
-        <p>
+        {/* <p>
            - Leo Torres
-        </p>
+        </p> */}
     </a>
 
     </FooterContainer>

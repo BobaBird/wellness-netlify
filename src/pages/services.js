@@ -241,9 +241,9 @@ const Services = ({ data }) => (
       </Card>
     </CardContainer>
         
-     <BtnStyle>
+     {/* <BtnStyle>
       <a href="https://sunny-donaire.appointlet.com" target="_blank" rel="noopener noreferrer" >Book Now</a>
-    </BtnStyle>   
+    </BtnStyle>    */}
 
 
     <br/>
