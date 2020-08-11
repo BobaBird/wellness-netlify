@@ -69,7 +69,7 @@ const IndexPage = ({ data }) => (
         <br/>
         <Link to="/my-practice/">Go to My Practice</Link>
         <br />
-        <Link to="/About/">Go to About Me</Link>
+        <Link to="/about/">Go to About Me</Link>
         <br />
         <Link to="/contact/">Go to Contact</Link>
 

@@ -48,7 +48,7 @@ const ContainerWrapper = styled.div`
   padding: 0px 1.0875rem 1.45rem;
   padding-top: 0;
   margin-top: 1.45rem;
-  // max-width: 960px;
+  /* max-width: 960px; */
   min-height: 80vh;
   color: #4d4d4d;
   h2 {
@@ -78,7 +78,7 @@ const CardContainer = styled.div`
   @media ${device.laptop} {
     display: inline-block;
     justify-content: space-around;
-    // padding-left: 1rem;
+    /* padding-left: 1rem; */
   }
   @media only screen and (min-width: 425px) {
     padding: 0 !important;
@@ -87,7 +87,7 @@ const CardContainer = styled.div`
 
 
 const Card = styled.div`
-// Use Stripe box-shadow values  **philz tip**
+  /* Use Stripe box-shadow values  **philz tip** */
   position: relative;
   margin: 12px;
   text-align: center;
@@ -102,7 +102,7 @@ const Card = styled.div`
      font-size: 14px;
    }
 
-  @media only screen and (max-width 1082px) and (min-width: 426px) {
+  @media only screen and (max-width: 1082px) and (min-width: 426px) {
     margin-top: 2.5rem;
   }
 
@@ -114,31 +114,31 @@ const Card = styled.div`
   }
 `;
 
-const BtnStyle = styled.div`
-  margin 80px auto;
-  // margin-top: 80px;
-  // border-radius: 4px;
-  // font-weight: 600;
-  // font-size: 16px;
-  // line-height: 45px;
-  // text-transform: uppercase;
-  // border: red;
-  // box-shadow: 2px 2px 4px #4d4d4d;
-  // outline: none;
-  // width: 180px;
-  // background: red;
-  // color: #fff;
-  // position: relative;
-  // overflow: hidden;
-  // z-index: 20;
+// const BtnStyle = styled.div`
+  // margin: 80px auto;
+  /* margin-top: 80px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 45px;
   text-transform: uppercase;
-  font-size: 2rem;
+  border: red;
+  box-shadow: 2px 2px 4px #4d4d4d;
+  outline: none;
+  width: 180px;
+  background: red;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 20; */
+  // text-transform: uppercase;
+  // font-size: 2rem;
 
-  a {
-    // color: #fff;
+  // a {
+    /* color: #fff; */
 
-  }
-`;
+  // }
+// `;
 
 
 

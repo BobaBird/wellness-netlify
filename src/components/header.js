@@ -28,10 +28,10 @@ const HeaderWrapper = styled.div`
   max-width: 100%;
   position: relative;
   background: #1f70f2;
-  // padding: 1.25rem 1.0675rem;
+  /* padding: 1.25rem 1.0675rem; */
   padding-top: 1.40rem;
   display: flex;
-  // justify-content: space-between;
+  /* justify-content: space-between; */
   h1 {
     color: white;
     font-size: 3rem;
@@ -81,7 +81,7 @@ const MainNav = styled.nav`
       color: #fff;
       &:hover {
         color: orange;
-        // border-bottom: 2px solid;
+        /* border-bottom: 2px solid; */
       }
     }
     }

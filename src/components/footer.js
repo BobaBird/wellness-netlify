@@ -92,7 +92,7 @@ const Footer = () => (
     </FooterContainer>
 
     <FooterContainer id="webmaster">
-    <a href="https://leo-torres.com" target="_blank" rel="noopener noreferrer" >
+    <a href="https://leo-torres.tech" target="_blank" rel="noopener noreferrer" >
       <h3>Leo T | Web Dev</h3>
 
         {/* <p>
