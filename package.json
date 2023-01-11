@@ -13,7 +13,7 @@
     "gatsby-plugin-sharp": "^2.0.37",
     "gatsby-plugin-styled-components": "^3.0.0-rc.5",
     "gatsby-source-filesystem": "^2.0.35",
-    "gatsby-transformer-remark": "^2.3.12",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.1-rc.3",
     "netlify-cms": "^2.9.1",
     "netlify-lambda": "^0.4.0",
